@@ -1,0 +1,77 @@
+.sce4 > button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffe2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.sce4 > button:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.2rem;
+  background-color: rgba(49, 251, 218, 1);
+  top: 0;
+  left: 0;
+  transition: width 1s ease-in-out;
+}
+
+.sce4 > button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.2rem;
+  background-color: rgba(49, 251, 218, 1);
+  bottom: 0;
+  right: 0;
+  transition: width 1s ease-in-out;
+}
+
+.sce4 > button:hover:before,
+.sce4 > button:hover:after {
+  width: 100%;
+}
+
+.letters {
+  width: 1.8rem;
+  height: 1.8rem;
+  perspective: 8rem;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card_face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.sce4 > button:hover .card {
+  transform: rotateY(180deg);
+}
+
+.fab {
+  color: rgba(49, 251, 218, 1);
+}

@@ -1,0 +1,251 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans Multani", sans-serif;
+  background: rgb(7, 251, 101);
+  background: linear-gradient(
+    30deg,
+    rgba(7, 251, 101, 1) 3%,
+    rgba(62, 247, 174, 1) 19%,
+    rgba(37, 252, 214, 1) 41%,
+    rgba(49, 251, 218, 1) 85%,
+    rgba(12, 250, 235, 1) 95%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.welcome-page {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #f5fdff;
+  border-radius: 1rem;
+
+  margin: 4rem auto 1rem auto;
+  min-height: 50vh;
+  max-width: 60vw;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.ques {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border-width: 2px;
+  margin-bottom: 1rem;
+}
+
+.view-instructions {
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-family: "IBM Plex Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #e5f4e7;
+  border-radius: 1rem;
+
+  margin: 1rem auto 1rem auto;
+  max-width: 60vw;
+  padding: 1rem;
+}
+
+.view-instructions > p,
+ul {
+  margin: 0.2rem;
+}
+
+.ques-header {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: #57d131;
+  border-radius: 1rem;
+}
+
+.ques-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.question-line {
+  word-wrap: break-word;
+  word-break: break-word;
+  font-weight: 400;
+}
+
+.ques-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.points {
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.nav-ques {
+  margin-top: 1rem;
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+div.nav-ques::-webkit-scrollbar {
+  height: 0.3rem;
+  width: 50%;
+}
+
+div.nav-ques::-webkit-scrollbar-track {
+  background: #b9f6ca;
+  border-radius: 1rem;
+}
+
+div.nav-ques::-webkit-scrollbar-thumb {
+  background: rgba(12, 250, 235, 1);
+  border-radius: 1rem;
+}
+
+div.nav-ques > button {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: whitesmoke;
+  font-size: 1rem;
+  padding: auto;
+  min-height: 1.8rem;
+  min-width: 1.8rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  font-style: cursive;
+}
+
+div.nav-ques > button:hover {
+  background-color: lightblue;
+}
+
+div.nav-ques > button.marked {
+  background-color: greenyellow;
+}
+
+div.nav-ques > button.marked:hover {
+  background-color: lime;
+}
+
+.bottom-nav {
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ScoreCard */
+.view-score-card {
+  display: grid;
+  grid-gap: 0.8rem;
+  /* flex-wrap: wrap; */
+  background-color: white;
+  border-radius: 1rem;
+
+  margin: 4rem auto 1rem auto;
+  min-height: 60vh;
+  max-width: 60vw;
+  padding: 1rem;
+}
+
+.score-card-element {
+  word-wrap: break-word;
+  word-break: break-word;
+  background: #e8f9fd;
+  padding: auto;
+  text-align: center;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.score-card-element > h3 {
+  margin: 1rem;
+}
+
+.sce1 {
+  grid-column: 1/2;
+  align-content: space-around;
+}
+
+.sce2 {
+  padding: 0.5rem 0;
+  grid-column: 2/3;
+}
+
+.sce3 {
+  grid-row: 2/3;
+  grid-column: span 2;
+  padding: 0.3rem;
+}
+
+.sce4 {
+  grid-row: 3/4;
+  grid-column: span 2;
+  height: 3rem;
+  align-self: end;
+}
+
+.view-confirm {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  z-index: 2000;
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-box {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1rem;
+  min-width: 15rem;
+  margin: 0;
+  border: solid;
+  border-width: 0.2rem 0 0 0;
+  border-color: lime;
+  border-radius: 0.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class="view"] {
+    max-width: 85vw;
+  }
+  [class="view-score-card"] {
+    max-width: 85vw;
+  }
+  [class="view-instructions"] {
+    max-width: 85vw;
+  }
+}
